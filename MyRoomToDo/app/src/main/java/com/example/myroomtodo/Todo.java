@@ -46,6 +46,7 @@ public class Todo {
         this.completed = completed;
     }
 
+
     @Override
     public String toString() {
         return "\nTodo{" +

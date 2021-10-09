@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else if(v.getId()==R.id.get_all)
         {
-            Thread thread = new Thread(new Runnable() {
+                Thread thread = new Thread(new Runnable() {
                 @Override
                 public void run() {
                     List<Todo> todoList = TodoRoomDatabase.getInstance(getApplicationContext())
