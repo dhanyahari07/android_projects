@@ -25,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         //MainActivityDataGenerator myData=new MainActivityDataGenerator();
-        MainActivityViewModel viewModel= new ViewModelProvider(this).get(MainActivityViewModel.class);
+        MainActivityViewModel viewModel= new ViewModelProvider(this)
+                .get(MainActivityViewModel.class);
         //String myRandomNumber=myData.getNumber();
         LiveData<String> myRandomNumber=viewModel.getNumber();
         myRandomNumber.observe(this, new Observer<String>() {

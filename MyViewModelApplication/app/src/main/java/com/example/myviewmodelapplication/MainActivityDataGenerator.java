@@ -19,16 +19,15 @@ public class MainActivityDataGenerator extends ViewModel {
         return myRandomNumber;
 
     }
-
     private void createNumber(){
         Log.i(TAG,"cretae new number");
         Random random=new Random();
         myRandomNumber="Number"+(random.nextInt(10-1)+1);
     }
 
-    @Override
+   /* @Override
     protected void onCleared() {
         super.onCleared();
         Log.i(TAG,"View model destroyed");
-    }
+    }*/
 }
