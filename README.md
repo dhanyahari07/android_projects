@@ -1,3 +1,3 @@
 # android_projects
 
-Avanced Android Concepts are compiler here
+Avanced Android Concepts are compiled here
