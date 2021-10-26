@@ -13,7 +13,6 @@
         android:layout_marginTop="30dp"
         android:layout_marginLeft="20dp"
         android:textSize="30dp"
-
         android:id="@+id/label_light"
         android:text="@string/label_light"
         />
@@ -23,7 +22,6 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:textSize="30dp"
-
         android:id="@+id/label_proximity"
         android:text="@string/label_proximity"/>
     <TextView
@@ -32,7 +30,6 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:textSize="30dp"
-
         android:id="@+id/label_temp"
         android:text="@string/label_temp"/>
 
