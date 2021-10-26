@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyLightTempProximityApplication</string>
+    <string name="error_no_sensor">No Sensor Available on Device</string>
+    <string name="label_light">Light Sensor: %1$.2f </string>
+    <string name="label_proximity">Proximity Sensor: %1$.2f </string>
+    <string name="label_temp">Temperature Sensor: %1$.2f </string>
+
+
+</resources>
