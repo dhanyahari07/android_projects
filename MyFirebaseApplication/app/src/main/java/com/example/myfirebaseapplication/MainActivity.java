@@ -35,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Employee emp=new Employee(name.getText().toString(),position.getText().toString());
-                dao.add(emp).addOnSuccessListener(new OnSuccessListener<Void>() {
+
+                   dao.add(emp).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
                         Log.d("Message","Record is inserted");
