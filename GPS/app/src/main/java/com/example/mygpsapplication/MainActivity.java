@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         txtLat = findViewById(R.id.textview1);
 
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
@@ -36,7 +37,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
             // for ActivityCompat#requestPermissions for more details.
             return;
         }
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0, (LocationListener) this);
+        locationManager.requestLocationUpdates
+                (LocationManager.GPS_PROVIDER, 1000, 0, (LocationListener) this);
     }
 
     @Override
