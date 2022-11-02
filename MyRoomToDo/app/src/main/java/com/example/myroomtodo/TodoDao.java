@@ -24,6 +24,9 @@ public interface TodoDao {
     @Delete
     void deleteTodo(Todo todo);
 
+    @Query("DELETE FROM todo_table")
+    void deleteall();
+
     @Update
     void updateTodo(Todo todo);
 

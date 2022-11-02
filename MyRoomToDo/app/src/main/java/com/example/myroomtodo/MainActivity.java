@@ -51,7 +51,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if(v.getId()==R.id.insert_single)
         {
-            Todo todo = new Todo("make a video on swift ...", false);
+            Todo todo = new Todo("make a video on swift ...",
+                    false);
             InsertAsyncTask insertAsyncTask = new InsertAsyncTask();
             insertAsyncTask.execute(todo);
 
@@ -83,7 +84,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Thread thread = new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    List<Todo> todoList = TodoRoomDatabase.getInstance(getApplicationContext())
+                    List<Todo> todoList =
+                            TodoRoomDatabase.getInstance
+                                    (getApplicationContext())
                             .todoDao()
                             .getAllTodos();
 
@@ -123,7 +126,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 @Override
                 public void run() {
                     List<Todo> todoList = new ArrayList<>();
-                    todoList.add(new Todo("make a video on kotlin", false));
+                    todoList.add(new Todo
+                            ("make a video on kotlin",
+                                    false));
                     todoList.add(new Todo("watch black panther", true));
                     todoList.add(new Todo("watch marvel movies seris", true));
                     todoList.add(new Todo("make a beginner video on pyhton", false));
@@ -172,12 +177,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    class InsertAsyncTask extends AsyncTask<Todo, Void, Void> {
+    class InsertAsyncTask extends
+            AsyncTask<Todo, Void, Void> {
 
         @Override
         protected Void doInBackground(Todo... todos) {
 
-            TodoRoomDatabase.getInstance(getApplicationContext())
+            TodoRoomDatabase.getInstance
+                    (getApplicationContext())
                     .todoDao()
                     .insertTodo(todos[0]);
 

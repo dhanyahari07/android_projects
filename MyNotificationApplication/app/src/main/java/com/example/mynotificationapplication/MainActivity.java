@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         btnShow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               /* if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+               if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     Log.d("MainActivity","Executing Notification with channels");
                     String channel_Id = "my_channel_01";// The id of the channel.
                     CharSequence channelName = "NotifChannel";// The user-visible name of the channel.
@@ -90,8 +90,8 @@ public class MainActivity extends AppCompatActivity {
                     manager.notify(notifyID,myNotification);
 
 
-                }*/
-                notificationHelper.sendHighPriorityNotification("this is title", "this is some awesome notificaiton. wow i learnt it the easy way.", MainActivity.class);
+                }
+//                notificationHelper.sendHighPriorityNotification("this is title", "this is some awesome notificaiton. wow i learnt it the easy way.", MainActivity.class);
             }
 
         });

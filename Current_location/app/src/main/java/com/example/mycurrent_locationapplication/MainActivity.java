@@ -52,19 +52,27 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //check permission
-                if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                if (ActivityCompat.checkSelfPermission
+                        (MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)
+                        == PackageManager.PERMISSION_GRANTED) {
                     //when permission granted
                     getLocation();
 
                 } else {
                     //when permission not gtanteed
-                    ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 44);
+                    ActivityCompat.requestPermissions
+                            (MainActivity.this, new String[]
+                                    {Manifest.permission.ACCESS_FINE_LOCATION}, 44);
                 }
 
             }
 
             private void getLocation() {
-                if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                if (ActivityCompat.checkSelfPermission
+                        (MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)
+                        != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission
+                        (MainActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION)
+                        != PackageManager.PERMISSION_GRANTED) {
                     // TODO: Consider calling
                     //    ActivityCompat#requestPermissions
                     // here to request the missing permissions, and then overriding
@@ -81,8 +89,6 @@ public class MainActivity extends AppCompatActivity {
 
                         Location location = task.getResult();
                         if (location != null) {
-
-
                             try {
                                 //init geocoder
 
